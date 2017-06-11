@@ -56,7 +56,14 @@ class PersonalSkill(MycroftSkill):
             .require("WhatAreYouKeyword").build()
         self.register_intent(what_are_you_intent,
                              self.handle_what_are_you_intent)
-
+        
+        who_is_your_master_intent = IntentBuilder("WhoIsYourMasterIntent")\
+            .require("WhoIsYourMasterKeyword").build()
+        self.register_intent(who_is_your_master_intent,
+                             self.handle_who_is_your_master_intent)
+        
+    def handle_who_is_your_master_intent(self, message):
+        self.speak_dialog("who.is.my.master")
     def handle_when_were_you_born_intent(self, message):
         self.speak_dialog("when.was.i.born")
 
