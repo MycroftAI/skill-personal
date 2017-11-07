@@ -1,8 +1,13 @@
-# Personal Skill
+## skill-personal
+Personality of Mycroft
 
-## Usage:
-* `what are you`
-* `when were you born`
-* `where were you born`
-* `who are you`
-* `who made you`
+## Description 
+Skill will answer some of the personality questions of mycroft
+
+## Examples 
+* "what are you?"
+* "where are you born?"
+* "who made you?"
+
+## Credits 
+Mycroft Inc
