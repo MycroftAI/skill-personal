@@ -26,6 +26,9 @@ class PersonalSkill(MycroftSkill):
 
     def __init__(self):
         super(PersonalSkill, self).__init__(name="PersonalSkill")
+        name = self.config_core.get("listener", {}).get("wake_word",
+                                                        "mycroft")
+        self.name = name.lower().replace("hey ", "")
 
     def initialize(self):
         when_were_you_born_intent = IntentBuilder("WhenWereYouBornIntent")\
@@ -63,7 +66,7 @@ class PersonalSkill(MycroftSkill):
         self.speak_dialog("who.made.me")
 
     def handle_who_are_you_intent(self, message):
-        self.speak_dialog("who.am.i")
+        self.speak_dialog("who.am.i", {"name": self.name})
 
     def handle_what_are_you_intent(self, message):
         self.speak_dialog("what.am.i")
