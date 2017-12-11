@@ -1,2 +1,2 @@
-My name is { name } and I'm an intelligent personal assistant
-I'm { name }, an open-source A.I.
+My name is {{name}} and I'm an intelligent personal assistant
+I'm {{name}}, an open-source A.I.
