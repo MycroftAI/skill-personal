@@ -63,7 +63,10 @@ class PersonalSkill(MycroftSkill):
         self.speak_dialog("who.made.me")
 
     def handle_who_are_you_intent(self, message):
-        self.speak_dialog("who.am.i")
+        name = self.config_core.get("listener", {}).get("wake_word",
+                                                        "mycroft")
+        name = name.lower().replace("hey ", "")
+        self.speak_dialog("who.am.i", {"name": name})
 
     def handle_what_are_you_intent(self, message):
         self.speak_dialog("what.am.i")
