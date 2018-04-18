@@ -3,5 +3,6 @@
   "intent_type": "WhereWereYouBornIntent",
   "intent": {
     "WhereWereYouBornKeyword": "where were you born"
-  }
+  },
+  "expected_dialog": "where.was.i.born"
 }
