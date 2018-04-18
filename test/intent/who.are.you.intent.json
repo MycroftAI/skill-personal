@@ -3,5 +3,6 @@
   "intent_type": "WhoAreYouIntent",
   "intent": {
     "WhoAreYouKeyword": "who are you"
-  }
+  },
+  "expected_dialog": "who.am.i"
 }

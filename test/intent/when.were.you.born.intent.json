@@ -3,5 +3,6 @@
   "intent_type": "WhenWereYouBornIntent",
   "intent": {
     "WhenWereYouBornKeyword": "when were you born"
-  }
+  },
+  "expected_dialog": "when.was.i.born"
 }

@@ -3,5 +3,6 @@
   "intent_type": "WhoMadeYouIntent",
   "intent": {
     "WhoMadeYouKeyWord": "who made you"
-  }
+  },
+  "expected_dialog": "who.made.me"
 }
