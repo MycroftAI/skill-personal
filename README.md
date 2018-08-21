@@ -1,13 +1,14 @@
-## skill-personal
-Personality of Mycroft
+## Mycroft Personality
+Provides basic responses to Mycroft's origins and a basic personality
 
 ## Description 
-Skill will answer some of the personality questions of mycroft
+This Skill answers some basic origin questions and personality questions around Mycroft AI, allowing the user to learn more about him. 
 
 ## Examples 
-* "what are you?"
-* "where are you born?"
-* "who made you?"
+* ""How old are you?""
+* ""What are you?""
+* ""Where were you born?""
+* ""Who made you?""
 
 ## Credits 
-Mycroft Inc
+@MycroftAI
