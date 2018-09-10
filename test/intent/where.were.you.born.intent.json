@@ -1,8 +1,5 @@
 {
   "utterance": "where were you born",
-  "intent_type": "WhereWereYouBornIntent",
-  "intent": {
-    "WhereWereYouBornKeyword": "where were you born"
-  },
+  "intent_type": "WhereWereYouBorn.intent",
   "expected_dialog": "where.was.i.born"
 }

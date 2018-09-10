@@ -1,8 +1,5 @@
 {
   "utterance": "who are you",
-  "intent_type": "WhoAreYouIntent",
-  "intent": {
-    "WhoAreYouKeyword": "who are you"
-  },
+  "intent_type": "WhoAreYou.intent",
   "expected_dialog": "who.am.i"
 }
