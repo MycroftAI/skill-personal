@@ -1,0 +1,5 @@
+{
+  "utterance": "do you rhyme",
+  "intent_type": "DoYouRhyme.intent",
+  "expected_dialog": "tell.a.rhyme"
+}
