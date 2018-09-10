@@ -12,14 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from os.path import dirname
-
-from adapt.intent import IntentBuilder
-from mycroft.skills.core import MycroftSkill
-from mycroft.util.log import getLogger
-
-
-logger = getLogger(__name__)
+from mycroft.skills.core import MycroftSkill, intent_file_handler
 
 
 class PersonalSkill(MycroftSkill):
@@ -27,52 +20,32 @@ class PersonalSkill(MycroftSkill):
     def __init__(self):
         super(PersonalSkill, self).__init__(name="PersonalSkill")
 
-    def initialize(self):
-        when_were_you_born_intent = IntentBuilder("WhenWereYouBornIntent")\
-            .require("WhenWereYouBornKeyword").build()
-        self.register_intent(when_were_you_born_intent,
-                             self.handle_when_were_you_born_intent)
-
-        where_were_you_born_intent = IntentBuilder("WhereWereYouBornIntent")\
-            .require("WhereWereYouBornKeyword").build()
-        self.register_intent(where_were_you_born_intent,
-                             self.handle_where_were_you_born_intent)
-
-        who_made_you_intent = IntentBuilder("WhoMadeYouIntent")\
-            .require("WhoMadeYouKeyWord").build()
-        self.register_intent(who_made_you_intent,
-                             self.handle_who_made_you_intent)
-
-        who_are_you_intent = IntentBuilder("WhoAreYouIntent")\
-            .require("WhoAreYouKeyword").build()
-        self.register_intent(who_are_you_intent,
-                             self.handle_who_are_you_intent)
-
-        what_are_you_intent = IntentBuilder("WhatAreYouIntent")\
-            .require("WhatAreYouKeyword").build()
-        self.register_intent(what_are_you_intent,
-                             self.handle_what_are_you_intent)
-
+    @intent_file_handler("WhenWereYouBorn.intent")
     def handle_when_were_you_born_intent(self, message):
         self.speak_dialog("when.was.i.born")
 
+    @intent_file_handler("WhereWereYouBorn.intent")
     def handle_where_were_you_born_intent(self, message):
         self.speak_dialog("where.was.i.born")
 
+    @intent_file_handler("WhoMadeYou.intent")
     def handle_who_made_you_intent(self, message):
         self.speak_dialog("who.made.me")
 
+    @intent_file_handler("WhoAreYou.intent")
     def handle_who_are_you_intent(self, message):
         name = self.config_core.get("listener", {}).get("wake_word",
                                                         "mycroft")
         name = name.lower().replace("hey ", "")
         self.speak_dialog("who.am.i", {"name": name})
 
+    @intent_file_handler("WhatAreYou.intent")
     def handle_what_are_you_intent(self, message):
         self.speak_dialog("what.am.i")
 
-    def stop(self):
-        pass
+    @intent_file_handler("DoYouRhyme.intent")
+    def handle_do_you_rhyme(self, message):
+        self.speak_dialog("tell.a.rhyme")
 
 
 def create_skill():
