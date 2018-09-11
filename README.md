@@ -6,7 +6,7 @@ Ask about the "birth" and parentage of Mycroft and get a taste of the community
 who is fostering this open source artificial intelligence.
 
 ## Examples
-* "How old are you?"
+* "When were you created?"
 * "What are you?"
 * "Where were you born?"
 * "Who made you?"
