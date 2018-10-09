@@ -11,6 +11,7 @@ who is fostering this open source artificial intelligence.
 * "Where were you born?"
 * "Who made you?"
 * "Do you even rhyme?"
+* "How do you do it?"
 
 ## Credits
 Mycroft AI (@MycroftAI)
@@ -23,3 +24,4 @@ Poem penned by community member Jelmer Prins
 ## Tags
 #personality
 #persona
+//comment added
