@@ -1,4 +1,4 @@
-# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/smile-wink.svg' card_color='#22a7f0' width='50' height='50' style='vertical-align:bottom'/> Mycroft's Personal Background
+# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/smile-wink.svg' card_color='#22a7f0' width='50' height='50' style='vertical-align:bottom'/> Mycroft's Background
 Learn history and personality of Mycroft
 
 ## About
