@@ -34,18 +34,11 @@ class PersonalSkill(MycroftSkill):
 
     @intent_file_handler("WhoAreYou.intent")
     def handle_who_are_you_intent(self, message):
-        name = self.config_core.get("listener", {}).get("wake_word",
+        name = self.config_core.get("listener", {}).get("name",
                                                         "mycroft")
         name = name.lower().replace("hey ", "")
         self.speak_dialog("who.am.i", {"name": name})
 
-    @intent_file_handler("WhatAreYou.intent")
-    def handle_what_are_you_intent(self, message):
-        self.speak_dialog("what.am.i")
-
-    @intent_file_handler("DoYouRhyme.intent")
-    def handle_do_you_rhyme(self, message):
-        self.speak_dialog("tell.a.rhyme")
 
 
 def create_skill():
