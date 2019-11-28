@@ -12,42 +12,38 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from mycroft.skills.core import MycroftSkill, intent_file_handler
+from mycroft.skills import MycroftSkill, intent_handler
 
 
 class PersonalSkill(MycroftSkill):
-
-    def __init__(self):
-        super(PersonalSkill, self).__init__(name="PersonalSkill")
-
-    @intent_file_handler("WhenWereYouBorn.intent")
+    @intent_handler("WhenWereYouBorn.intent")
     def handle_when_were_you_born_intent(self, message):
         self.speak_dialog("when.was.i.born")
 
-    @intent_file_handler("WhereWereYouBorn.intent")
+    @intent_handler("WhereWereYouBorn.intent")
     def handle_where_were_you_born_intent(self, message):
         self.speak_dialog("where.was.i.born")
 
-    @intent_file_handler("WhoMadeYou.intent")
+    @intent_handler("WhoMadeYou.intent")
     def handle_who_made_you_intent(self, message):
         self.speak_dialog("who.made.me")
 
-    @intent_file_handler("WhoAreYou.intent")
+    @intent_handler("WhoAreYou.intent")
     def handle_who_are_you_intent(self, message):
         name = self.config_core.get("listener", {}).get("wake_word",
                                                         "mycroft")
         name = name.lower().replace("hey ", "")
         self.speak_dialog("who.am.i", {"name": name})
 
-    @intent_file_handler("WhatAreYou.intent")
+    @intent_handler("WhatAreYou.intent")
     def handle_what_are_you_intent(self, message):
         self.speak_dialog("what.am.i")
 
-    @intent_file_handler("DoYouRhyme.intent")
+    @intent_handler("DoYouRhyme.intent")
     def handle_do_you_rhyme(self, message):
         self.speak_dialog("tell.a.rhyme")
 
-    @intent_file_handler("DoYouDream.intent")
+    @intent_handler("DoYouDream.intent")
     def handle_do_you_dream(self, message):
         self.speak_dialog("dream")
 
